@@ -40,7 +40,7 @@ def default_config():
         'disable_existing_loggers': False,
         'formatters': {
             'coloring': {
-                '()': 'logutils.ColoringFormatter',
+                '()': 'logcolor.ColoringFormatter',
             }
         },
         'handlers': {
