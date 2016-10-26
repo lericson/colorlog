@@ -1,13 +1,23 @@
 # Colored Logging
 
-For example:
+Hit the ground running:
 
-    logcfg = logcolor.default_config()
+```python
+import logcolor, logging
+logcolor.basic_config()
+logging.root.info('woho!')
+```
 
-    if verbose:
-        logcfg['handlers']['console']['level'] = 'DEBUG'
-        logcfg['root']['level'] = 'DEBUG'
+More usefully:
 
-    logcolor.dict_config(logcfg)
+```python
+logcfg = logcolor.default_config()
 
-    logging.root.info('woho!')
+if verbose:
+    logcfg['handlers']['console']['level'] = 'DEBUG'
+    logcfg['root']['level'] = 'DEBUG'
+
+logcolor.dict_config(logcfg)
+
+logging.root.info('woho!')
+```
