@@ -1,5 +1,9 @@
 # Colored Logging
 
+```
+pip install logcolor
+```
+
 Hit the ground running:
 
 ```python
