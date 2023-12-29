@@ -28,11 +28,15 @@ class ColoringFormatter(logging.Formatter):
 
 
 def basic_config(level=logging.INFO, logger=logging.root):
+    if [isinstance(h, logging.StreamHandler) and h.stream.isatty() for h in logger.handlers] == [True]:
+        [handler] = logger.handlers
+    else:
+        handler = logging.StreamHandler()
+        logger.addHandler(handler)
     formatter = ColoringFormatter()
-    handler = logging.StreamHandler()
     handler.setFormatter(formatter)
-    logger.addHandler(handler)
     logger.setLevel(level)
+
 
 def default_config():
     return {
