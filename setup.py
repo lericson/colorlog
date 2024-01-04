@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='logcolor',
-      version='1.0.1',
+      version='1.1.0',
       author='Ludvig Ericson',
       author_email='ludvig@lericson.se',
       description='Colored logs',
